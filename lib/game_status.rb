@@ -61,5 +61,4 @@ def over?(board)
   else
     true
   end
-
 end
