@@ -45,8 +45,7 @@ def full?(board)
 end
 
 def draw?(board)
-  index = 0
-  if won?(board) == false && position_taken?(board, index) == true
+  if !won?(board) && full?(board)
      true
   else
      false
