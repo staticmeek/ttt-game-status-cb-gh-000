@@ -30,34 +30,34 @@ def won?(board)
     elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
       return win_combination
     else
-      return false
+       false
     end
   end
-  return false
+   false
 end
 
 def full?(board)
   if board.any? { |position| position == "" || position == " " || position == nil }
-    return false
+     false
   else
-    return true
+     true
   end
 end
 
 def draw?(board)
   index = 0
   if won?(board) == false && position_taken?(board, index) == true
-    return true
+     true
   else
-    return false
+     false
   end
 end
 
 def over?(board)
   if (won?(board)) || (full?(board)) || (draw?(board))
-    return true
+     true
   else
-    return false
+     false
   end
 end
 
